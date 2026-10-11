@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.env
+*.db
+*.sqlite
+*.sqlite3
+
+offline_queue.json
+
+.pytest_cache/
+.streamlit/secrets.toml
+
+.vscode/
+# Local environments and generated files
+.env.*
+!.env.example
+*.log
+dist/
+build/
+.vscode/

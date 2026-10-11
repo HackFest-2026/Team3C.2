@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#05070d"
+    >
+
+    <title>MineGuard | TechVolt</title>
+
+    <link
+        rel="stylesheet"
+        href="/dashboard/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- Animated background -->
+    <div class="background-grid"></div>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <!-- ======================================================
+         TOP NAVIGATION
+    ======================================================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                ⚡
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    TECHVOLT
+                </div>
+
+                <div class="brand-product">
+                    MINEGUARD
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="institution">
+
+            <div class="institution-name">
+                KLE TECHNOLOGICAL UNIVERSITY
+            </div>
+
+            <div class="institution-sub">
+                HUBBALLI • ELECTRICAL & ELECTRONICS ENGINEERING
+            </div>
+
+        </div>
+
+
+        <div class="connection-status">
+
+            <span
+                id="status-dot"
+                class="status-dot online"
+            >
+                ●
+            </span>
+
+            <span id="system-status">
+                SYSTEM ONLINE
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================================
+         MAIN
+    ======================================================= -->
+
+    <main class="dashboard">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+                    AI-POWERED MINING SAFETY INTELLIGENCE
+                </div>
+
+                <h1>
+                    Mine Safety
+                    <span>Command Center</span>
+                </h1>
+
+                <p>
+                    Real-time edge sensing, hazard intelligence
+                    and AI-assisted safety decisions.
+                </p>
+
+                <div class="hero-meta">
+
+                    <div>
+                        <span>DEVICE</span>
+                        <strong id="device">
+                            MINE-EDGE-01
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>ZONE</span>
+                        <strong id="zone">
+                            ZONE-A
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>LAST UPDATE</span>
+                        <strong id="last-update">
+                            --
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Risk Orb -->
+
+            <div
+                id="risk-orb"
+                class="risk-orb"
+            >
+
+                <div class="orb-ring ring-one"></div>
+                <div class="orb-ring ring-two"></div>
+
+                <div class="orb-content">
+
+                    <div class="orb-label">
+                        SAFETY RISK
+                    </div>
+
+                    <div
+                        id="risk-score"
+                        class="risk-score"
+                    >
+                        0
+                    </div>
+
+                    <div
+                        id="risk-level-badge"
+                        class="badge low"
+                    >
+                        LOW
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             SENSOR CARDS
+        =================================================== -->
+
+        <section class="sensor-grid">
+
+            <!-- Gas -->
+
+            <article class="sensor-card">
+
+                <div class="sensor-top">
+
+                    <div class="sensor-icon gas-icon">
+                        ◉
+                    </div>
+
+                    <div>
+                        <div class="sensor-name">
+                            GAS LEVEL
+                        </div>
+
+                        <div class="sensor-status">
+                            LIVE SENSOR
+                        </div>
+                    </div>
+
+                    <div
+                        id="gas-state"
+                        class="mini-state"
+                    >
+                        NORMAL
+                    </div>
+
+                </div>
+
+                <div class="sensor-value-row">
+
+                    <span
+                        id="gas"
+                        class="sensor-value"
+                    >
+                        --
+                    </span>
+
+                    <span class="sensor-unit">
+                        PPM
+                    </span>
+
+                </div>
+
+                <div class="sensor-bar">
+                    <div
+                        id="gas-bar"
+                        class="sensor-bar-fill"
+                    ></div>
+                </div>
+
+            </article>
+
+
+            <!-- Temperature -->
+
+            <article class="sensor-card">
+
+                <div class="sensor-top">
+
+                    <div class="sensor-icon temp-icon">
+                        °C
+                    </div>
+
+                    <div>
+                        <div class="sensor-name">
+                            TEMPERATURE
+                        </div>
+
+                        <div class="sensor-status">
+                            LIVE SENSOR
+                        </div>
+                    </div>
+
+                    <div
+                        id="temperature-state"
+                        class="mini-state"
+                    >
+                        NORMAL
+                    </div>
+
+                </div>
+
+                <div class="sensor-value-row">
+
+                    <span
+                        id="temperature"
+                        class="sensor-value"
+                    >
+                        --
+                    </span>
+
+                    <span class="sensor-unit">
+                        °C
+                    </span>
+
+                </div>
+
+                <div class="sensor-bar">
+                    <div
+                        id="temperature-bar"
+                        class="sensor-bar-fill"
+                    ></div>
+                </div>
+
+            </article>
+
+
+            <!-- Distance -->
+
+            <article class="sensor-card">
+
+                <div class="sensor-top">
+
+                    <div class="sensor-icon distance-icon">
+                        ↕
+                    </div>
+
+                    <div>
+                        <div class="sensor-name">
+                            STRUCTURAL DISTANCE
+                        </div>
+
+                        <div class="sensor-status">
+                            PROXIMITY SENSOR
+                        </div>
+                    </div>
+
+                    <div
+                        id="distance-state"
+                        class="mini-state"
+                    >
+                        SAFE
+                    </div>
+
+                </div>
+
+                <div class="sensor-value-row">
+
+                    <span
+                        id="distance"
+                        class="sensor-value"
+                    >
+                        --
+                    </span>
+
+                    <span class="sensor-unit">
+                        CM
+                    </span>
+
+                </div>
+
+                <div class="sensor-bar">
+                    <div
+                        id="distance-bar"
+                        class="sensor-bar-fill"
+                    ></div>
+                </div>
+
+            </article>
+
+
+            <!-- Vibration -->
+
+            <article class="sensor-card">
+
+                <div class="sensor-top">
+
+                    <div class="sensor-icon vibration-icon">
+                        ≋
+                    </div>
+
+                    <div>
+                        <div class="sensor-name">
+                            VIBRATION
+                        </div>
+
+                        <div class="sensor-status">
+                            MOTION SENSOR
+                        </div>
+                    </div>
+
+                    <div
+                        id="vibration-state"
+                        class="mini-state"
+                    >
+                        NORMAL
+                    </div>
+
+                </div>
+
+                <div class="sensor-value-row">
+
+                    <span
+                        id="vibration"
+                        class="sensor-value"
+                    >
+                        --
+                    </span>
+
+                    <span class="sensor-unit">
+                        INDEX
+                    </span>
+
+                </div>
+
+                <div class="sensor-bar">
+                    <div
+                        id="vibration-bar"
+                        class="sensor-bar-fill"
+                    ></div>
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ==================================================
+             AI + HAZARDS
+        =================================================== -->
+
+        <section class="main-panels">
+
+
+            <!-- AI SAFETY COPILOT -->
+
+            <article class="panel ai-panel">
+
+                <div class="panel-header">
+
+                    <div class="panel-title">
+
+                        <div class="ai-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <h2>
+                                AI Safety Copilot
+                            </h2>
+
+                            <span>
+                                DECISION SUPPORT ENGINE
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="priority-badge"
+                        class="badge low"
+                    >
+                        NORMAL
+                    </div>
+
+                </div>
+
+
+                <div class="ai-status-line">
+
+                    <span class="pulse-dot"></span>
+
+                    <span id="ai-status">
+                        ANALYSIS ACTIVE
+                    </span>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <div class="recommendation-label">
+                        RECOMMENDED ACTION
+                    </div>
+
+                    <div
+                        id="recommendation-action"
+                        class="recommendation-action"
+                    >
+                        Waiting for sensor data
+                    </div>
+
+                    <p
+                        id="recommendation-reason"
+                        class="recommendation-reason"
+                    >
+                        The AI safety engine is waiting for
+                        real-time sensor telemetry.
+                    </p>
+
+                </div>
+
+
+                <div class="additional-actions">
+
+                    <div class="recommendation-label">
+                        RESPONSE PROTOCOL
+                    </div>
+
+                    <ul id="additional-actions">
+                        <li>
+                            Awaiting sensor telemetry
+                        </li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+            <!-- ACTIVE HAZARDS -->
+
+            <article class="panel hazards-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Active Hazards
+                        </h2>
+
+                        <span>
+                            REAL-TIME THREAT MONITORING
+                        </span>
+
+                    </div>
+
+                    <div class="hazard-counter">
+                        <span id="hazard-count">
+                            0
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="hazards"
+                    class="hazards-container"
+                >
+
+                    <div class="no-hazards">
+                        ✓ NO ACTIVE HAZARDS
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ==================================================
+             TELEMETRY
+        =================================================== -->
+
+        <section class="telemetry-panel panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Live Sensor Telemetry
+                    </h2>
+
+                    <span>
+                        REAL-TIME EDGE DATA STREAM
+                    </span>
+
+                </div>
+
+                <div class="stream-status">
+                    <span class="pulse-dot"></span>
+                    LIVE
+                </div>
+
+            </div>
+
+
+            <div class="telemetry-chart">
+
+                <div class="chart-grid"></div>
+
+                <div class="chart-line">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+                <div class="chart-labels">
+
+                    <span>
+                        -60s
+                    </span>
+
+                    <span>
+                        -45s
+                    </span>
+
+                    <span>
+                        -30s
+                    </span>
+
+                    <span>
+                        -15s
+                    </span>
+
+                    <span>
+                        NOW
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             INCIDENTS + RECENT READINGS
+        =================================================== -->
+
+        <section class="bottom-grid">
+
+
+            <!-- INCIDENTS -->
+
+            <article class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Active Incidents
+                        </h2>
+
+                        <span>
+                            SAFETY EVENT MANAGEMENT
+                        </span>
+
+                    </div>
+
+                    <div
+                        id="incident-count"
+                        class="count-badge"
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="incidents"
+                    class="incidents-container"
+                >
+
+                    <div class="empty-state">
+                        No active incidents
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- RECENT READINGS -->
+
+            <article class="panel readings-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Readings
+                        </h2>
+
+                        <span>
+                            EDGE TELEMETRY HISTORY
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>TIME</th>
+                                <th>GAS</th>
+                                <th>TEMP</th>
+                                <th>DISTANCE</th>
+                                <th>VIBRATION</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="readings-table">
+
+                            <tr>
+                                <td colspan="5">
+                                    Waiting for sensor data...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ==================================================
+             DEMO CONTROL
+        =================================================== -->
+
+        <section class="demo-panel panel">
+
+            <div class="demo-copy">
+
+                <div class="eyebrow">
+                    DEMONSTRATION CONTROL
+                </div>
+
+                <h2>
+                    Simulate Mine Conditions
+                </h2>
+
+                <p>
+                    Use these controls during the prototype
+                    demonstration to simulate different safety
+                    scenarios.
+                </p>
+
+            </div>
+
+
+            <div class="demo-buttons">
+
+                <button
+                    class="demo-button normal"
+                    onclick="runDemo('normal')"
+                >
+                    <span>●</span>
+                    NORMAL
+                </button>
+
+                <button
+                    class="demo-button warning"
+                    onclick="runDemo('gas_leak')"
+                >
+                    <span>◉</span>
+                    GAS LEAK
+                </button>
+
+                <button
+                    class="demo-button hazard"
+                    onclick="runDemo('structural_hazard')"
+                >
+                    <span>▲</span>
+                    STRUCTURAL
+                </button>
+
+                <button
+                    class="demo-button critical"
+                    onclick="runDemo('critical')"
+                >
+                    <span>!</span>
+                    CRITICAL
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            ⚡ TECHVOLT
+        </div>
+
+        <div>
+            MineGuard — AI-Powered Mining Safety Intelligence
+        </div>
+
+        <div>
+            KLE Technological University • Hubballi
+        </div>
+
+        <div>
+            Department of Electrical & Electronics Engineering
+        </div>
+
+    </footer>
+
+
+    <script src="/dashboard/app.js"></script>
+
+</body>
+</html>
